@@ -4,11 +4,29 @@
 一些常用的Shell命令长时间不用了总会忘记，收集以备查询
 
 - [About Vim](#about-vim)
+- [About Git](#about-git)
 - [About Anaconda](#about-anaconda)
 - [About Redis](#about-redis)
 
 
 ### About Vim
+![](https://raw.githubusercontent.com/jia-zh/Useful-Shell-Commands/master/images/vim%20command.png)
+
+### About Git
+```shell
+克隆项目
+git clone git@github.com:jia-zh/Useful-Shell-Commands.git
+
+提交修改到暂存区
+git add -A
+
+提交修改
+git commit -m "Initial commit"
+
+提交修改到仓库
+git push
+
+```
 
 ### About Anaconda
 ```shell
