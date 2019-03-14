@@ -3,11 +3,25 @@
   
 一些常用的Shell命令长时间不用了总会忘记，收集以备查询
 
+- [Linux Commands](#linux-commands)
 - [About Vim](#about-vim)
 - [About Git](#about-git)
 - [About Anaconda](#about-anaconda)
 - [About Redis](#about-redis)
 
+### Linux Commands
+```shell
+# 统计test.txt行数
+cat test.txt |wc -l
+wc -l test.txt
+
+# 将一个大文件拆分为多个文件
+# 文件拆分为大小为2G，拆分文件的前缀为test.tar.gz. ，默认拆分为test.tar.gz.aa,ab,ac...
+cat test.tar.gz | split -b 2G - test.tar.gz.
+
+# 将多个拆分的文件合并为一个文件
+cat test.tar.gz.a* > test.tar.gz
+```
 
 ### About Vim
 ![](https://raw.githubusercontent.com/jia-zh/Useful-Shell-Commands/master/images/vim%20command.png)
