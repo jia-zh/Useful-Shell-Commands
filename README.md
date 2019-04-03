@@ -4,6 +4,7 @@
 一些常用的Shell命令长时间不用了总会忘记，收集以备查询
 
 - [Linux Commands](#linux-commands)
+- [About nohup](#about-nohup)
 - [About Vim](#about-vim)
 - [About Git](#about-git)
 - [About Anaconda](#about-anaconda)
@@ -21,6 +22,18 @@ cat test.tar.gz | split -b 2G - test.tar.gz.
 
 # 将多个拆分的文件合并为一个文件
 cat test.tar.gz.a* > test.tar.gz
+```
+
+### About nohup
+```shell
+# 提交后台运行作业
+nohup command > log 2>1& &
+
+# 查看当前有多少在后台执行的命令
+jobs
+
+# 将后台中的命令调至前台继续执行。
+fg %jobnumber（是命令编号，不是进程号）
 ```
 
 ### About Vim
