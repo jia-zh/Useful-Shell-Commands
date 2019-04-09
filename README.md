@@ -85,6 +85,37 @@ conda install -c anaconda cudnn=7.1.2
 
 
 ### About Redis
+- 安装
+```shell
+解压
+tar -zxvf redis-5.0.0.tar.gz
+进入目录
+cd redis-5.0.0/
+执行make 对Redis解压后文件进行编译
+make
+编译完成之后，可以看到解压文件redis-5.0.0中会有对应的src、conf等文件夹
+编译成功后，进入src文件夹，执行make install进行Redis安装
+cd src
+make install
+```
+- 基本设置
+```shell
+创建bin文件夹，将redis-server、redis-cli、redis.conf 放到此文件夹下，便于后面命令的执行
+cd /redis     进入redis目录下
+mkdir bin 
+
+mv redis.conf bin  移动，防止运行时运行到默认配置 所以建议保存一个配置信息
+mv src/redis-server bin
+mv src/redis-cli bin
+```
+
+- 设置redis 外网访问
+```shell
+vim redis.conf
+将 bind 127.0.0.1 注释掉 
+设置 protected-mode 为no 
+```
+
 - 后台启动redis服务
 ```shell
 编辑conf文件，将daemonize属性改为yes（表明需要在后台运行）
@@ -92,27 +123,6 @@ vim redis.conf
 
 再次启动redis服务，并指定启动服务配置文件
 redis-server /usr/local/redis/etc/redis.conf
-```
-
-- 关闭Redis服务
-```shell
-./redis-cli shutdown
-```
-
-- 设置redis 外网访问
-```shell
-创建bin文件夹，将redis-server、redis-cli、redis.conf 放到此文件夹下，便于后面命令的执行
-cd /redis     进入redis目录下
-mkidr bin 
-
-mv redis.conf bin  移动，防止运行时运行到默认配置 所以建议保存一个配置信息
-mv src/redis-server bin
-mv src/redis-cli bin
-
-vim redis.conf
-将 bind 127.0.0.1 注释掉 
-设置 protected-mode 为no 
-设置daemonize 为yes 
 ```
 
 - 配置redis log文件路径和数据文件路径
@@ -128,4 +138,9 @@ logfile "/home/zhengjia/redis-5.0.0/log/redis.log"
 # The working directory.
 # dir ./
 dir /home/zhengjia/redis-5.0.0/data
+```
+
+- 关闭Redis服务
+```shell
+./redis-cli shutdown
 ```
