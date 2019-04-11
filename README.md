@@ -12,6 +12,15 @@
 
 ### Linux Commands
 ```shell
+# 查看文件夹中各个文件大小
+du -h folder-name/
+
+# 查看文件夹大小
+du -h -s folder-name/
+
+# 将多个拆分的文件合并为一个文件
+cat test.tar.gz.a* > test.tar.gz
+
 # 统计test.txt行数
 cat test.txt |wc -l
 wc -l test.txt
