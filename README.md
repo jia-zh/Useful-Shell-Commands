@@ -10,7 +10,7 @@
 - [About Anaconda](#about-anaconda)
 - [About Redis](#about-redis)
 
-### Linux Commands
+## Linux Commands
 ```shell
 # 查看文件夹中各个文件大小
 du -h folder-name/
@@ -33,7 +33,7 @@ cat test.tar.gz | split -b 2G - test.tar.gz.
 cat test.tar.gz.a* > test.tar.gz
 ```
 
-### About nohup
+## About nohup
 ```shell
 # 提交后台运行作业
 nohup command > log 2>1& &
@@ -50,10 +50,10 @@ ps -aux|grep chat.js
 fg %jobnumber（是命令编号，不是进程号）
 ```
 
-### About Vim
+## About Vim
 ![](https://raw.githubusercontent.com/jia-zh/Useful-Shell-Commands/master/images/vim%20command.png)
 
-### About Git
+## About Git
 ```shell
 克隆项目
 git clone git@github.com:jia-zh/Useful-Shell-Commands.git
@@ -69,7 +69,7 @@ git push
 
 ```
 
-### About Anaconda
+## About Anaconda
 ```shell
 查看安装了哪些包
 conda list
@@ -98,7 +98,7 @@ conda install -c anaconda cudnn=7.1.2
 ```
 
 
-### About Redis
+## About Redis
 - 安装
 ```shell
 解压
